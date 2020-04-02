@@ -25,3 +25,6 @@ __pycache__
 *.swp
 .vscode/
 .idea/
+build/
+dist/
+tfp_nightly.egg-info/

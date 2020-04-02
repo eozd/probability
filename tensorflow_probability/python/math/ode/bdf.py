@@ -387,7 +387,7 @@ class BDF(base.Solver):
         def maybe_update_factorization():
           new_unitary, new_upper = tf.cond(
               should_update_factorization,
-              update_factorization, lambda: [unitary, upper])
+              update_factorization, lambda: (unitary, upper))
           return [
               jacobian_mat, jacobian_is_up_to_date, num_jacobian_evaluations,
               new_unitary, new_upper
